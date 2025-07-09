@@ -35,12 +35,14 @@ Para visualizar e inspeccionar la aplicación en tu máquina local, solo necesit
 Abre tu terminal, navega a la carpeta donde quieras guardar el proyecto y ejecuta el siguiente comando. No olvides reemplazar `[TU-USUARIO]` con tu nombre de usuario de GitHub.
 
 ```bash
-git clone [https://github.com/](https://github.com/)kernelpanicemp/draftosaurus.git
+[git clone [https://github.com/](https://github.com/)kernelpanicemp/draftosaurus.git](https://github.com/kernelpanicemp/draftosaurus.git)
 ```
+
+O simplemente descarga la carpeta.
 
 ### **Paso 2: Abre el proyecto en VS Code**
 
-Una vez clonado, accede a la carpeta del proyecto y ábrelo con Visual Studio Code.
+Una vez clonado o descargado, accede a la carpeta del proyecto y ábrelo con Visual Studio Code.
 
 ```bash
 cd draftosaurus
@@ -49,7 +51,7 @@ code .
 
 ### **Paso 3: Instala la extensión "Live Server"**
 
-Si no la tienes, esta extensión de VS Code es fundamental para ver los cambios en tiempo real.
+Si no la tenés, esta extensión de VS Code es fundamental para ver los cambios en tiempo real.
 
 1.  Ve al panel de **Extensiones** en VS Code (icono de los cubos o `Ctrl+Shift+X`).
 2.  Busca `Live Server` (del autor Ritwick Dey).
