@@ -9,10 +9,10 @@ Proyecto de egreso del grupo KERNEL PANIC
 S.I.G.P.D.
 
 Integrantes:
-Danilo Suárez
-Maximiliano Viera
-Nicolás Piñón
-Facundo Olivera
+## Danilo Suárez
+## Maximiliano Viera
+## Nicolás Piñón
+## Facundo Olivera
 
 ---
 
