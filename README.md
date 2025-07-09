@@ -1,6 +1,6 @@
 # Draftosaurus 🦖
 
-¡Bienvenido a Draftosaurus! Una aplicación web interactiva creada con HTML, CSS y JavaScript puros.
+¡Bienvenido a Draftosaurus! Una aplicación web interactiva creada con HTML, CSS, JavaScript, PHP y MySQL.
 
 ## ✨ Descripción
 
