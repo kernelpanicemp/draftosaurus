@@ -9,9 +9,13 @@ Proyecto de egreso del grupo KERNEL PANIC
 S.I.G.P.D.
 
 # Integrantes:
+
 ## Danilo Suárez
+
 ## Maximiliano Viera
+
 ## Nicolás Piñón
+
 ## Facundo Olivera
 
 ---
@@ -57,14 +61,10 @@ Si no la tenés, esta extensión de VS Code es fundamental para ver los cambios 
 2.  Busca `Live Server` (del autor Ritwick Dey).
 3.  Haz clic en **Instalar**.
 
-
 ### **Paso 4: ¡Inicia la aplicación!**
 
-Este es el último paso. Como el archivo principal `index.html` está dentro de la carpeta `html`, la forma más fácil de iniciarlo es:
-
-1.  En el explorador de archivos de VS Code, expande la carpeta `html`.
-2.  Haz clic derecho sobre el archivo `index.html`.
-3.  Selecciona la opción **`Open with Live Server`**.
+1.  Haz clic derecho sobre el archivo `index.html`.
+2.  Selecciona la opción **`Open with Live Server`**.
 
 ¡Y ya está! Se abrirá una nueva pestaña en tu navegador con la aplicación funcionando. Ahora puedes modificar el código HTML, CSS o JavaScript y ver los cambios al instante.
 
