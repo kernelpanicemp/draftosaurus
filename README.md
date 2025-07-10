@@ -32,7 +32,7 @@ Para visualizar e inspeccionar la aplicación en tu máquina local, solo necesit
 
 ### **Paso 1: Clona el repositorio**
 
-Abre tu terminal, navega a la carpeta donde quieras guardar el proyecto y ejecuta el siguiente comando. No olvides reemplazar `[TU-USUARIO]` con tu nombre de usuario de GitHub.
+Abre tu terminal, navega a la carpeta donde quieras guardar el proyecto y ejecuta el siguiente comando.
 
 ```bash
 git clone https://github.com/kernelpanicemp/draftosaurus.git
