@@ -71,5 +71,5 @@ Este es el último paso. Como el archivo principal `index.html` está dentro de 
 ---
 
 <p align="center">
-  ¡Gracias por explorar Draftosaurus!
+  ¡Gracias por ver el proyecto!
 </p>
