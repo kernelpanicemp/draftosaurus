@@ -2,7 +2,7 @@
 
 ¡Bienvenido a Draftosaurus! Una aplicación web interactiva creada con HTML, CSS, JavaScript, PHP y MySQL.
 
-## ✨ Descripción
+# ✨ Descripción
 
 Proyecto de egreso del grupo KERNEL PANIC
 3ºMF ITI NOCTURNO
