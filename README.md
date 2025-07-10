@@ -4,8 +4,8 @@
 
 # ✨ Descripción
 
-Proyecto de egreso del grupo KERNEL PANIC
-3ºMF ITI NOCTURNO
+Proyecto de egreso del grupo KERNEL PANIC  
+3ºMF ITI NOCTURNO  
 S.I.G.P.D.
 
 # Integrantes:
