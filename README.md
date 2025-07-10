@@ -1,4 +1,4 @@
-# Draftosaurus 🦖
+![Logo de draftosaurus](https://i.ytimg.com/vi/7QT1-IDtWTk/maxresdefault.jpg)
 
 ¡Bienvenido a Draftosaurus! Una aplicación web interactiva creada con HTML, CSS, JavaScript, PHP y MySQL.
 
@@ -8,7 +8,7 @@ Proyecto de egreso del grupo KERNEL PANIC
 3ºMF ITI NOCTURNO
 S.I.G.P.D.
 
-Integrantes:
+# Integrantes:
 ## Danilo Suárez
 ## Maximiliano Viera
 ## Nicolás Piñón
@@ -16,7 +16,7 @@ Integrantes:
 
 ---
 
-## 🛠️ Tecnologías Utilizadas
+## 🛠️ Tecnologías utilizadas
 
 El proyecto está construido con tecnologías web fundamentales:
 
@@ -26,7 +26,7 @@ El proyecto está construido con tecnologías web fundamentales:
 
 ---
 
-## 🚀 Cómo Empezar
+## 🚀 Cómo empezar
 
 Para visualizar e inspeccionar la aplicación en tu máquina local, solo necesitas **Visual Studio Code** y seguir estos sencillos pasos.
 
@@ -35,7 +35,7 @@ Para visualizar e inspeccionar la aplicación en tu máquina local, solo necesit
 Abre tu terminal, navega a la carpeta donde quieras guardar el proyecto y ejecuta el siguiente comando. No olvides reemplazar `[TU-USUARIO]` con tu nombre de usuario de GitHub.
 
 ```bash
-[git clone [https://github.com/](https://github.com/)kernelpanicemp/draftosaurus.git](https://github.com/kernelpanicemp/draftosaurus.git)
+git clone https://github.com/kernelpanicemp/draftosaurus.git
 ```
 
 O simplemente descarga la carpeta.
@@ -57,7 +57,6 @@ Si no la tenés, esta extensión de VS Code es fundamental para ver los cambios 
 2.  Busca `Live Server` (del autor Ritwick Dey).
 3.  Haz clic en **Instalar**.
 
-![Live Server Extension](https://i.imgur.com/qGh0iOh.png)
 
 ### **Paso 4: ¡Inicia la aplicación!**
 
@@ -66,8 +65,6 @@ Este es el último paso. Como el archivo principal `index.html` está dentro de 
 1.  En el explorador de archivos de VS Code, expande la carpeta `html`.
 2.  Haz clic derecho sobre el archivo `index.html`.
 3.  Selecciona la opción **`Open with Live Server`**.
-
-![Open with Live Server](https://i.imgur.com/cSoAx4G.png)
 
 ¡Y ya está! Se abrirá una nueva pestaña en tu navegador con la aplicación funcionando. Ahora puedes modificar el código HTML, CSS o JavaScript y ver los cambios al instante.
 
