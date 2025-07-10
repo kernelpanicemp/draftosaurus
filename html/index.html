@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Draftosaurus - Kernel Panic</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Inter:wght@400;700&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js" defer></script>
+  <script src="../js/main.js" defer></script>
+  <link rel="stylesheet" href="../css/main.css" />
+</head>
+
+<body class="bg-[#A0E8F8]">
+  <!-- Contenedor de todo -->
+  <div class="relative min-h-screen w-full flex flex-col overflow-hidden">
+    <!-- Nubes y paisaje de fondo -->
+    <div class="absolute inset-0 z-0">
+      <div class="cloud cloud-1"></div>
+      <div class="cloud cloud-2"></div>
+      <div class="cloud cloud-3"></div>
+
+      <!-- Paisaje -->
+      <div class="absolute bottom-0 left-0 right-0 h-[20vh] bg-[#B6D7A8]"></div>
+      <!-- Césped -->
+      <div class="absolute bottom-0 left-0 right-0 h-[10vh] bg-[#FDE49C]"></div>
+      <!-- Tierra -->
+
+      <!-- Dinosaurio de fondo - tengo que cambiaAAAAAAAAAAAAAAALÑSKDLASJDFGKLJFDKLGKDLFJGKLDFGJKLDFGJKDFLGr esto -->
+      <svg viewBox="0 0 128 73"
+        class="absolute bottom-[9vh] left-[2%] w-auto h-[18vh] text-[#6b8e23]/50 fill-current z-0">
+        <path
+          d="M0,73 C0,73 5,60 8,45 C11,30 15,35 15,35 L17,73 H22 L25,50 C28,30 32,35 32,35 L34,73 H40 L42,40 C45,20 50,25 50,25 L52,73 H60 L63,55 C66,35 70,40 70,40 L72,73 H80 L83,45 C86,25 90,30 90,30 L92,73 H100 L102,60 C105,40 110,45 110,45 L112,73 H120 L124,50 C126,30 128,35 128,35 V73 H0 Z" />
+      </svg>
+      <svg viewBox="0 0 119 69"
+        class="absolute bottom-[9vh] left-[2%] w-auto h-[18vh] text-[#6b8e23]/50 fill-current z-0">
+        <path
+          d="M0,69 C0,69 3,55 5,40 C7,25 10,30 10,30 L12,69 H18 L20,45 C22,25 25,30 25,30 L27,69 H35 L38,30 C41,10 45,15 45,15 L47,69 H55 L58,50 C61,30 65,35 65,35 L67,69 H75 L78,40 C81,20 85,25 85,25 L87,69 H95 L98,55 C101,35 105,40 105,40 L107,69 H112 L115,60 C117,40 119,45 119,45 V69 H0 Z" />
+      </svg>
+
+      <!-- SVG de Césped 2 -->
+      <svg viewBox="0 0 119 69"
+        class="absolute bottom-[8vh] right-[2%] w-auto h-[20vh] text-[#6b8e23]/40 fill-current z-0">
+        <path
+          d="M0,69 C0,69 3,55 5,40 C7,25 10,30 10,30 L12,69 H18 L20,45 C22,25 25,30 25,30 L27,69 H35 L38,30 C41,10 45,15 45,15 L47,69 H55 L58,50 C61,30 65,35 65,35 L67,69 H75 L78,40 C81,20 85,25 85,25 L87,69 H95 L98,55 C101,35 105,40 105,40 L107,69 H112 L115,60 C117,40 119,45 119,45 V69 H0 Z" />
+      </svg>
+      <svg viewBox="0 0 128 73"
+        class="absolute bottom-[8vh] right-[2%] w-auto h-[20vh] text-[#6b8e23]/40 fill-current z-0">
+        <path
+          d="M0,73 C0,73 5,60 8,45 C11,30 15,35 15,35 L17,73 H22 L25,50 C28,30 32,35 32,35 L34,73 H40 L42,40 C45,20 50,25 50,25 L52,73 H60 L63,55 C66,35 70,40 70,40 L72,73 H80 L83,45 C86,25 90,30 90,30 L92,73 H100 L102,60 C105,40 110,45 110,45 L112,73 H120 L124,50 C126,30 128,35 128,35 V73 H0 Z" />
+      </svg>
+
+
+    </div>
+
+    <!-- Contenido principal -->
+    <div id="content" class="relative z-10 flex-grow w-full h-full flex flex-col p-4 sm:p-6 md:p-8 text-center">
+      <!-- Pantalla de inicio -->
+      <div id="screen-home" class="flex flex-col flex-grow items-center justify-between h-full">
+        <h1 class="font-bangers text-5xl sm:text-6xl md:text-7xl text-[#F58233] sm:mt-4"
+          style="text-shadow: 1px 1px 2px #ffffff">
+          DRAFTOSAURUS
+        </h1>
+
+        <div class="flex-grow flex items-center justify-center">
+          <a href="#" class="aspect-square flex items-center justify-center">
+            <img src="../assets/dino4.svg" alt="Dinosaurio 6"
+              class="h-full w-full object-contain p-1 md:p-2 [filter:drop-shadow(0_6px_4px_rgba(0,0,0,0.25))]">
+          </a>
+        </div>
+
+        <div class="w-full max-w-md mx-auto mt-8 space-y-4 bg-white/20 backdrop-blur-sm rounded-t-3xl pt-8 pb-4 px-4">
+          <button onclick="showScreen('screen-welcome')"
+            class="w-full bg-[#F58233] text-white font-bold py-3 rounded-xl text-xl sm:text-2xl shadow-lg border-b-4 border-orange-700 active:border-b-0 active:translate-y-1 transition duration-300 ease-in-out hover:bg-orange-600">
+            JUGAR
+          </button>
+          <button
+            class="w-full bg-[#2CD4D9] text-white font-bold py-3 rounded-xl text-xl sm:text-2xl shadow-lg border-b-4 border-cyan-700 active:border-b-0 active:translate-y-1 transition duration-300 ease-in-out hover:bg-cyan-600">
+            VER REGLAS
+          </button>
+          <button
+            class="w-full bg-[#FDE49C] text-orange-600 font-bold py-3 rounded-xl text-xl sm:text-2xl shadow-lg border-b-4 border-amber-500 active:border-b-0 transition active:translate-y-1 duration-300 ease-in-out hover:bg-amber-400">
+            CONFIGURACIÓN
+          </button>
+        </div>
+      </div>
+
+      <!-- Bienvenida de jueguito -->
+      <div id="screen-welcome" class="hidden flex-col flex-grow items-center justify-between h-full">
+        <div class="flex-grow flex flex-col items-center justify-center">
+          <h2 class="font-bangers text-4xl sm:text-5xl text-[#F58233]" style="text-shadow: 1px 1px 2px #ffffff">
+            Bienvenido a
+          </h2>
+          <h1 class="font-bangers text-5xl sm:text-6xl md:text-7xl text-[#F58233] mb-4"
+            style="text-shadow: 1px 1px 2px #ffffff">
+            DRAFTOSAURUS
+          </h1>
+          <p class="text-slate-700 font-semibold text-base sm:text-lg max-w-sm mx-auto">
+            ¡Un juego de aventuras jurásicas y decisiones estratégicas!
+          </p>
+        </div>
+
+        <div class="w-full flex-grow flex items-end justify-center space-x-2 sm:space-x-4">
+          <div class="dino-purple character w-16 h-20 sm:w-20 sm:h-24 md:w-24 md:h-28"></div>
+          <a href="#" class="w-24 h-28 sm:w-28 sm:h-32 md:w-32 md:h-36">
+            <img src="../assets/dino6.svg" alt="Dinosaurio 6"
+              class="h-full w-full object-contain [filter:drop-shadow(0_6px_4px_rgba(0,0,0,0.25))]">
+          </a>
+          <div class="dino-character character w-20 h-24 sm:w-24 sm:h-28 md:w-28 md:h-32"></div>
+        </div>
+
+        <div class="w-full max-w-md mx-auto mt-8 bg-white/20 backdrop-blur-sm rounded-t-3xl pt-8 pb-4 px-4">
+          <button onclick="showScreen('screen-presentation')"
+            class="w-full bg-[#F58233] text-white font-bold py-3 rounded-xl text-xl sm:text-2xl shadow-lg border-b-4 border-orange-700 active:border-b-0 transition active:translate-y-1 duration-300 ease-in-out hover:bg-orange-600">
+            CONTINUAR
+          </button>
+        </div>
+      </div>
+
+      <!-- Presentación del jueguito -->
+      <div id="screen-presentation" class="hidden flex-col flex-grow items-center justify-between h-full">
+        <div class="flex-grow flex flex-col items-center justify-center w-full">
+          <h1 class="font-bangers text-5xl sm:text-6xl text-[#F58233] mb-6 text-center"
+            style="text-shadow: 1px 1px 2px #ffffff">
+            ¿Cómo se juega?
+          </h1>
+          <div
+            class="w-full max-w-md mx-auto space-y-6 text-center text-slate-700 font-semibold bg-white/50 p-6 rounded-2xl">
+            <div class="flex flex-col items-center">
+              <svg class="w-16 h-16 text-orange-500 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M14 3.5V11V4.5C14 3.67157 14.6716 3 15.5 3C16.3284 3 17 3.67157 17 4.5V11V7.5C17 6.67157 17.6716 6 18.5 6C19.3284 6 20 6.67157 20 7.5V16C20 19.3137 17.3137 22 14 22H12.8727C11.3483 22 9.88112 21.4198 8.76904 20.3772L3.81045 15.7285C3.09365 15.0565 3.0754 13.9246 3.77016 13.2298C4.44939 12.5506 5.55063 12.5506 6.22985 13.2298L8.00001 15V6.5C8.00001 5.67157 8.67158 5 9.50001 5C10.3284 5 11 5.67157 11 6.5V11V3.5C11 2.67157 11.6716 2 12.5 2C13.3284 2 14 2.67157 14 3.5Z"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <p class="text-lg">1. Elegí un dinosaurio de tu mano</p>
+            </div>
+            <div class="flex flex-col items-center">
+              <svg class="w-16 h-16 text-orange-500 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="7" r="5" stroke-width="2" />
+                <path
+                  d="M17 14H17.3517C18.8646 14 20.1408 15.1266 20.3285 16.6279L20.719 19.7519C20.8682 20.9456 19.9374 22 18.7344 22H5.26556C4.06257 22 3.1318 20.9456 3.28101 19.7519L3.67151 16.6279C3.85917 15.1266 5.13538 14 6.64835 14H7"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <p class="text-lg">2. Pasa los demás al siguiente jugador</p>
+            </div>
+            <div class="flex flex-col items-center">
+              <svg class="w-16 h-16 text-orange-500 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12.8306 3.443C12.6449 3.16613 12.3334 3 12.0001 3C11.6667 3 11.3553 3.16613 11.1696 3.443L7.38953 9.07917L2.74781 3.85213C2.44865 3.51525 1.96117 3.42002 1.55723 3.61953C1.15329 3.81904 0.932635 4.26404 1.01833 4.70634L3.70454 18.5706C3.97784 19.9812 5.21293 21 6.64977 21H17.3504C18.7872 21 20.0223 19.9812 20.2956 18.5706L22.9818 4.70634C23.0675 4.26404 22.8469 3.81904 22.4429 3.61953C22.039 3.42002 21.5515 3.51525 21.2523 3.85213L16.6106 9.07917L12.8306 3.443Z"
+                  stroke-width="2" />
+              </svg>
+              <p class="text-lg">3. ¡Colocá tu dino en el zoo y gana puntos!</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full max-w-md mx-auto mt-8 bg-white/20 backdrop-blur-sm rounded-t-3xl pt-8 pb-4 px-4">
+          <button onclick="showScreen('screen-register')"
+            class="w-full bg-[#F58233] text-white font-bold py-3 rounded-xl text-xl sm:text-2xl shadow-lg border-b-4 border-orange-700 active:border-b-0 transition active:translate-y-1 duration-300 ease-in-out hover:bg-orange-600">
+            ENTENDIDO
+          </button>
+        </div>
+      </div>
+
+      <!-- Pantalla de registro -->
+      <div id="screen-register" class="hidden flex-col flex-grow items-center justify-center h-full">
+        <div class="w-full max-w-md mx-auto flex-grow flex flex-col justify-center">
+          <h1 class="font-bangers text-5xl sm:text-6xl text-[#F58233] mb-6 text-center"
+            style="text-shadow: 1px 1px 2px #ffffff">
+            Registrate
+          </h1>
+          <form>
+            <div class="space-y-4 bg-white/50 p-6 rounded-2xl">
+              <input type="text" placeholder="Nombre"
+                class="w-full p-3 rounded-lg border-2 border-gray-300 focus:border-orange-400 focus:ring-orange-400" />
+              <input type="email" placeholder="Correo electrónico"
+                class="w-full p-3 rounded-lg border-2 border-gray-300 focus:border-orange-400 focus:ring-orange-400" />
+              <input type="password" placeholder="Contraseña"
+                class="w-full p-3 rounded-lg border-2 border-gray-300 focus:border-orange-400 focus:ring-orange-400" />
+              <input type="password" placeholder="Confirmar contraseña"
+                class="w-full p-3 rounded-lg border-2 border-gray-300 focus:border-orange-400 focus:ring-orange-400" />
+              <button onclick="event.preventDefault(); showScreen('screen-registered')"
+                class="w-full bg-[#F58233] text-white font-bold py-3 rounded-xl text-xl sm:text-2xl shadow-lg border-b-4 border-orange-700 active:border-b-0 transition active:translate-y-1 duration-300 ease-in-out hover:bg-orange-600">
+                Registrarse
+              </button>
+            </div>
+          </form>
+          <p class="text-center mt-4">
+            <span class="text-slate-700">¿Ya tenés cuenta?</span>
+            <button onclick="showScreen('screen-login')" class="font-bold text-orange-600 hover:underline">
+              Iniciar sesión
+            </button>
+          </p>
+        </div>
+        <div class="h-16"></div>
+      </div>
+
+      <!-- Acá está la pantalla de login -->
+      <div id="screen-login" class="hidden flex-col flex-grow items-center justify-center h-full">
+        <div class="dino-green character w-24 h-20 sm:w-32 sm:h-24 md:w-40 md:h-28 self-center mb-4"></div>
+        <div class="w-full max-w-md mx-auto flex-grow flex flex-col justify-center">
+          <h1 class="font-bangers text-5xl sm:text-6xl text-[#F58233] mb-6 text-center"
+            style="text-shadow: 1px 1px 2px #ffffff">
+            Iniciar sesión
+          </h1>
+          <form>
+            <div class="space-y-4 bg-white/50 p-6 rounded-2xl">
+              <input type="email" placeholder="Correo electrónico"
+                class="w-full p-3 rounded-lg border-2 border-gray-300 focus:border-orange-400 focus:ring-orange-400" />
+              <input type="password" placeholder="Contraseña"
+                class="w-full p-3 rounded-lg border-2 border-gray-300 focus:border-orange-400 focus:ring-orange-400" />
+              <button onclick="event.preventDefault(); showScreen('screen-lobby')"
+                class="w-full bg-[#F58233] text-white font-bold py-3 rounded-xl text-xl sm:text-2xl shadow-lg border-b-4 border-orange-700 active:border-b-0 transition active:translate-y-1 duration-300 ease-in-out hover:bg-orange-600">
+                Iniciar sesión
+              </button>
+          </form>
+        </div>
+        <p class="text-center mt-4">
+          <span class="text-slate-700">¿No tenés cuenta?</span>
+          <button onclick="showScreen('screen-register')" class="font-bold text-orange-600 hover:underline">
+            Registrate
+          </button>
+        </p>
+      </div>
+      <div class="h-16"></div>
+    </div>
+
+    <!-- Después del registro viene para acá -->
+    <div id="screen-registered" class="hidden flex-col flex-grow items-center justify-between h-full">
+      <div class="flex-grow flex flex-col items-center justify-center">
+        <h1 class="font-bangers text-5xl sm:text-6xl mt-12 text-[#F58233] mb-4"
+          style="text-shadow: 1px 1px 2px #ffffff">
+          ¡Registro exitoso!
+        </h1>
+      </div>
+
+      <div class="w-full flex-grow flex items-end justify-center space-x-2 sm:space-x-4">
+        <div class="dino-purple character w-16 h-20 sm:w-20 sm:h-24 md:w-24 md:h-28"></div>
+        <a href="#" class="w-24 h-28 sm:w-28 sm:h-32 md:w-32 md:h-36">
+          <img src="../assets/dino6.svg" alt="Dinosaurio 6"
+            class="h-full w-full object-contain [filter:drop-shadow(0_6px_4px_rgba(0,0,0,0.25))]">
+        </a>
+        <div class="dino-character character w-20 h-24 sm:w-24 sm:h-28 md:w-28 md:h-32"></div>
+      </div>
+
+      <div class="w-full max-w-md mx-auto mt-8 bg-white/20 backdrop-blur-sm rounded-t-3xl pt-8 pb-4 px-4">
+        <button onclick="showScreen('screen-lobby')"
+          class="w-full bg-[#F58233] text-white font-bold py-3 rounded-xl text-xl sm:text-2xl shadow-lg border-b-4 border-orange-700 active:border-b-0 transition active:translate-y-1 duration-300 ease-in-out hover:bg-orange-600">
+          IR A TU PERFIL
+        </button>
+      </div>
+    </div>
+
+    <!-- Este sería el lobby -->
+    <div id="screen-lobby" class="hidden flex-col flex-grow items-center justify-between h-full w-full">
+      <!-- Header del lobby -->
+      <header class="w-full max-w-4xl mx-auto flex justify-between items-center p-2 bg-white/30 rounded-xl">
+        <button class="p-2 rounded-full hover:bg-white/50 transition opacity-0 cursor-default">
+          <svg class="w-8 h-8 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M17 20h5v-5M3 4h5V9M21 9l-6 6-4-4-6 6"></path>
+          </svg>
+        </button>
+        <div class="font-bangers text-3xl sm:text-4xl text-white" style="text-shadow: 2px 2px 4px #000000a0">
+          ¡Hola, Facundo!
+        </div>
+        <button class="p-2 rounded-full hover:bg-white/50 transition">
+          <svg class="w-8 h-8 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0z">
+            </path>
+          </svg>
+        </button>
+      </header>
+
+      <!-- Acá está el perfil del usuario -->
+      <main class="w-full flex-grow flex items-center justify-center my-4">
+        <div class="flex-grow flex items-center justify-center">
+          <a href="#" class="aspect-square flex items-center justify-center">
+            <img src="../assets/dino4.svg" alt="Dinosaurio 6"
+              class="h-full w-full object-contain p-1 md:p-2 [filter:drop-shadow(0_6px_4px_rgba(0,0,0,0.25))]">
+          </a>
+        </div>
+      </main>
+
+      <!-- Footer del perfil -->
+      <footer class="w-full max-w-md mx-auto mt-8 space-y-4 bg-white/20 backdrop-blur-sm rounded-t-3xl pt-8 pb-4 px-4">
+        <div class="bg-white/50 p-4 rounded-xl text-center">
+          <p class="text-slate-700 font-semibold">Partidas ganadas</p>
+          <p class="font-bangers text-4xl text-orange-600">47</p>
+        </div>
+        <button onclick="showScreen('screen-game')"
+          class="w-full bg-[#F58233] text-white font-bold py-3 rounded-xl text-xl sm:text-2xl shadow-lg border-b-4 border-orange-700 active:border-b-0 transition active:translate-y-1 duration-300 ease-in-out hover:bg-orange-600">
+          Crear nueva partida
+        </button>
+      </footer>
+    </div>
+
+    <!-- Esta sería la pantalla principal -->
+    <div id="screen-game" class="hidden flex-col flex-grow items-center justify-between h-full w-full">
+      <!-- Acá es header -->
+      <header class="w-full max-w-4xl mx-auto flex justify-between items-center p-2 bg-white/30 rounded-xl">
+        <button class="p-2 rounded-full hover:bg-white/50 transition">
+          <svg class="w-8 h-8 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M17 20h5v-5M3 4h5V9M21 9l-6 6-4-4-6 6"></path>
+          </svg>
+        </button>
+        <div class="font-bangers text-3xl sm:text-4xl text-white" style="text-shadow: 2px 2px 4px #000000a0">
+          Ronda 1
+        </div>
+        <button class="p-2 rounded-full hover:bg-white/50 transition">
+          <svg class="w-8 h-8 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0z">
+            </path>
+          </svg>
+        </button>
+      </header>
+
+      <!-- Acá iría el tablero -->
+      <main class="w-full flex-grow flex items-center justify-center my-2">
+        <div class="w-full max-w-4xl h-100 sm:h-64 md:h-120 flex items-center justify-center">
+          <img src="../assets/board.svg" alt="Tablero del juego">
+        </div>
+      </main>
+
+      <!-- Contenedor para las cosas -->
+      <footer class="w-full max-w-4xl mx-auto bg-white/20 backdrop-blur-sm rounded-t-3xl p-4">
+        <!-- Acá iría el dado -->
+        <div class="flex justify-center items-center mb-4">
+          <div class="dice w-24 h-24 [filter:drop-shadow(0_6px_4px_rgba(0,0,0,0.25))] flex items-center justify-center">
+            <img src="../assets/dice.svg" alt="Dado del juego" />
+            </svg>
+          </div>
+        </div>
+        <div class="grid grid-cols-3 sm:grid-cols-6 gap-2 md:gap-4 place-items-center">
+
+          <a href="#" class="aspect-square flex items-center justify-center">
+            <img src="../assets/dino1.svg" alt="Dinosaurio 1"
+              class="h-full w-full object-contain p-1 md:p-2 [filter:drop-shadow(0_6px_4px_rgba(0,0,0,0.25))]">
+          </a>
+
+          <a href="#" class="aspect-square flex items-center justify-center">
+            <img src="../assets/dino2.svg" alt="Dinosaurio 2"
+              class="h-full w-full object-contain p-1 md:p-2 [filter:drop-shadow(0_6px_4px_rgba(0,0,0,0.25))]">
+          </a>
+
+          <a href="#" class="aspect-square flex items-center justify-center">
+            <img src="../assets/dino3.svg" alt="Dinosaurio 3"
+              class="h-full w-full object-contain p-1 md:p-2 [filter:drop-shadow(0_6px_4px_rgba(0,0,0,0.25))]">
+          </a>
+
+          <a href="#" class="aspect-square flex items-center justify-center">
+            <img src="../assets/dino4.svg" alt="Dinosaurio 4"
+              class="h-full w-full object-contain p-1 md:p-2 [filter:drop-shadow(0_6px_4px_rgba(0,0,0,0.25))]">
+          </a>
+
+          <a href="#" class="aspect-square flex items-center justify-center">
+            <img src="../assets/dino5.svg" alt="Dinosaurio 5"
+              class="h-full w-full object-contain p-1 md:p-2 [filter:drop-shadow(0_6px_4px_rgba(0,0,0,0.25))]">
+          </a>
+
+          <a href="#" class="aspect-square flex items-center justify-center">
+            <img src="../assets/dino6.svg" alt="Dinosaurio 6"
+              class="h-full w-full object-contain p-1 md:p-2 [filter:drop-shadow(0_6px_4px_rgba(0,0,0,0.25))]">
+          </a>
+
+        </div>
+        <button onclick="showScreen('screen-results')"
+          class="w-full mt-6 max-w-md mx-auto bg-[#F58233] text-white font-bold py-3 rounded-xl text-xl sm:text-2xl shadow-lg border-b-4 border-orange-700 active:border-b-0 transition active:translate-y-1 duration-300 ease-in-out hover:bg-orange-600">
+          Confirmar jugada
+        </button>
+      </footer>
+    </div>
+
+    <!-- Acá tendría la pantalla de resultados -->
+    <div id="screen-results" class="hidden flex-col flex-grow items-center justify-center h-full w-full">
+      <h1 class="font-bangers text-5xl sm:text-6xl md:text-7xl text-white mb-8"
+        style="text-shadow: 3px 3px 6px #000000a0">
+        Resultados
+      </h1>
+
+      <div class="w-full max-w-md mx-auto space-y-4">
+        <!-- 2do Lugar -->
+        <div class="bg-slate-400/80 p-4 rounded-xl border-b-4 border-slate-600 flex items-center space-x-4">
+          <div class="font-bangers text-4xl text-white">2</div>
+          <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd">
+            </path>
+          </svg>
+          <div class="flex-grow text-left">
+            <div class="font-bold text-white text-xl">Jugador 2</div>
+            <div class="font-semibold text-slate-200">100 Puntos</div>
+          </div>
+        </div>
+        <!-- 1er Lugar -->
+        <div
+          class="bg-amber-400/80 p-6 rounded-xl border-b-4 border-amber-600 flex items-center space-x-4 transform scale-110">
+          <div class="font-bangers text-5xl text-white">1</div>
+          <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd">
+            </path>
+          </svg>
+          <div class="flex-grow text-left">
+            <div class="font-bold text-white text-2xl">Jugador 1</div>
+            <div class="font-semibold text-amber-200">125 Puntos</div>
+          </div>
+        </div>
+        <!-- 3er Lugar -->
+        <div class="bg-orange-500/80 p-4 rounded-xl border-b-4 border-orange-700 flex items-center space-x-4">
+          <div class="font-bangers text-4xl text-white">3</div>
+          <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd">
+            </path>
+          </svg>
+          <div class="flex-grow text-left">
+            <div class="font-bold text-white text-xl">Jugador 3</div>
+            <div class="font-semibold text-orange-200">90 Puntos</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full max-w-md mx-auto mt-12">
+        <button onclick="showScreen('screen-home')"
+          class="w-full bg-[#2CD4D9] text-white font-bold py-3 rounded-xl text-xl sm:text-2xl shadow-lg border-b-4 border-cyan-700 active:border-b-0 transition active:translate-y-1 duration-300 ease-in-out hover:bg-cyan-600">
+          Jugar de nuevo
+        </button>
+      </div>
+    </div>
+  </div>
+  </div>
+
+</body>
+
+</html>

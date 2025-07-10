@@ -1,0 +1,91 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #a0e8f8;
+    min-height: 100dvh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.font-bangers {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 2px;
+}
+
+.cloud {
+    position: absolute;
+    background: white;
+    border-radius: 9999px;
+    opacity: 0.9;
+}
+
+.cloud-1 {
+    top: 15%;
+    left: 10%;
+    width: 15vw;
+    max-width: 100px;
+    height: 4vw;
+    max-height: 30px;
+}
+
+.cloud-2 {
+    top: 20%;
+    right: 15%;
+    width: 18vw;
+    max-width: 120px;
+    height: 5vw;
+    max-height: 40px;
+}
+
+button, .dice {
+    cursor: pointer;
+}
+
+.cloud-3 {
+    top: 10%;
+    left: 45%;
+    width: 12vw;
+    max-width: 80px;
+    height: 3.5vw;
+    max-height: 25px;
+}
+
+.character {
+    position: relative;
+    align-self: flex-end;
+}
+
+.dino-character {
+    background-color: #f9a826;
+    border-radius: 50% 50% 0 0;
+}
+
+.main-character {
+    background-color: #eeeeee;
+    border: 4px solid #333;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.main-character .screen {
+    background-color: #2cd4d9;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+}
+
+.dino-purple {
+    background-color: #c1a7e2;
+    border-radius: 50% 50% 0 0;
+}
+
+.dino-green {
+    background-color: #8bc34a;
+    border-radius: 50% 50% 0 0;
+}
