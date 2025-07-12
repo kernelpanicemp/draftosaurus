@@ -2,16 +2,24 @@
 // Todas las pantallas están ocultas por defecto así que las voy mostrando con esto
 // Va una por una en base al id, después voy a cambiar todo esto
 // Para el prototipo inicial esto funciona bien
-function showScreen(screenId) {
+// Usa el hash para navegar entre pantallas sin recargar la página y también para que se mantenga el estado al recargar
+// Probablemente tendré que hacer algún que otro cambio
+function showScreen(screenId, updateHash = true) {
   document.querySelectorAll('[id^="screen-"]').forEach((screen) => {
     screen.classList.add('hidden')
     screen.classList.remove('flex')
+    screen.setAttribute('aria-hidden', 'true')
   })
 
   const screenToShow = document.getElementById(screenId)
   if (screenToShow) {
     screenToShow.classList.remove('hidden')
     screenToShow.classList.add('flex')
+    screenToShow.setAttribute('aria-hidden', 'false')
+  }
+
+  if (updateHash && window.location.hash !== `#${screenId}`) {
+    window.location.hash = screenId
   }
 
   if (screenId === 'screen-results') {
@@ -23,7 +31,7 @@ function showScreen(screenId) {
       return Math.random() * (max - min) + min
     }
 
-    const interval = setInterval(function() {
+    const interval = setInterval(function () {
       const timeLeft = animationEnd - Date.now()
 
       if (timeLeft <= 0) {
@@ -60,10 +68,18 @@ function closeAllDropdowns(excludeDropdown = null) {
   })
 }
 
+window.addEventListener('hashchange', () => {
+  const screenId = window.location.hash.replace('#', '')
+  if (screenId.startsWith('screen-')) {
+    showScreen(screenId, false)
+  }
+})
+
 window.addEventListener('click', () => {
   closeAllDropdowns()
 })
 
 document.addEventListener('DOMContentLoaded', () => {
-  showScreen('screen-home')
+  const initialScreen = window.location.hash.replace('#', '') || 'screen-home'
+  showScreen(initialScreen, false)
 })
