@@ -45,6 +45,25 @@ function showScreen(screenId) {
   }
 }
 
+function toggleProfileDropdown(event) {
+  event.stopPropagation()
+  const dropdown = event.currentTarget.nextElementSibling
+  closeAllDropdowns(dropdown)
+  dropdown.classList.toggle('hidden')
+}
+
+function closeAllDropdowns(excludeDropdown = null) {
+  document.querySelectorAll('.profile-dropdown').forEach((dropdown) => {
+    if (dropdown !== excludeDropdown) {
+      dropdown.classList.add('hidden')
+    }
+  })
+}
+
+window.addEventListener('click', () => {
+  closeAllDropdowns()
+})
+
 document.addEventListener('DOMContentLoaded', () => {
   showScreen('screen-home')
 })
