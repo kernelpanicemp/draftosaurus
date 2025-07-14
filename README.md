@@ -8,6 +8,16 @@ Proyecto de egreso del grupo KERNEL PANIC
 3ºMF ITI NOCTURNO  
 S.I.G.P.D.
 
+Este es el prototipo inicial para la adaptación del juego. El enfoque principal es construirlo como una Single-Page Application,
+para ofrecer una experiencia fluída, similar a la de una aplicación nativa, sin necesidad de recargar la página durante el uso.
+
+La idea es que una vez que la estructura principal de la página se haya cargado, solo se intercambian pocos fragmentos de datos
+con el servidor (por ejemplo, qué dinosaurio eligió el jugador o cuál fue el resultado del dado). La interfaz se actualizaría
+al instante en el navegador y eso haría que el juego se sienta rápido y responsivo.
+
+Al evitar esas recargas, nos permite tener la oportunidad de ofrecer transiciones entre las distintas vistas, por lo tanto,
+la web se comportaría más como una aplicación de escritorio o móvil, lo cual es el estándar esperado para los juegos hoy en día.
+
 # Integrantes:
 
 ## Danilo Suárez
