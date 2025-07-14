@@ -9,7 +9,7 @@ Proyecto de egreso del grupo KERNEL PANIC
 S.I.G.P.D.
 
 Este es el prototipo inicial para la adaptación del juego. El enfoque principal es construirlo como una Single-Page Application,
-para ofrecer una experiencia fluída, similar a la de una aplicación nativa, sin necesidad de recargar la página durante el uso.
+para ofrecer una experiencia fluida, similar a la de una aplicación nativa, sin necesidad de recargar la página durante el uso.
 
 La idea es que una vez que la estructura principal de la página se haya cargado, solo se intercambian pocos fragmentos de datos
 con el servidor (por ejemplo, qué dinosaurio eligió el jugador o cuál fue el resultado del dado). La interfaz se actualizaría
