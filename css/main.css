@@ -37,7 +37,8 @@ body {
     max-height: 40px;
 }
 
-button, .dice {
+button,
+.dice {
     cursor: pointer;
 }
 
